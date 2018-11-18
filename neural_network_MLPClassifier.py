@@ -38,6 +38,18 @@ mlp = MLPClassifier(hidden_layer_sizes=(13,13,13),max_iter=500)
 # fit the training data to our model
 mlp.fit(X_train, y_train)
 
+# training accuracies on the training set 
+# start here since this is not training set or test set, modify the codes for them
+print('Accuracy of the training set:', mlp.score(X, y))
+
+import time
+# time.time() 
+# returns the time in seconds since the epoch as a floating point number
+# time.clock()
+# On Unix, return the current processor time as a floating point number expressed in seconds.
+# On Windows, this function returns wall-clock seconds elapsed since the first call to this function.
+print(time.time(), time.clock())
+
 # Predictions and Evaluation
 predictions = mlp.predict(X_test)
 
